@@ -2,11 +2,14 @@
 source 'https://rubygems.org'
 
 # Specify the Jekyll version
-gem 'jekyll', '~> 4.3.3'  # Adjust the version based on your local Jekyll installation
+gem 'jekyll', '~> 4.2.0'
+gem 'jekyll-feed', '~> 0.15'       # Example plugin
+gem 'jekyll-seo-tag', '~> 2.7'     # Example plugin
 
-# Commonly used plugins
-gem 'jekyll-feed', '~> 0.15'       # RSS feeds
-gem 'jekyll-seo-tag', '~> 2.7'     # SEO tags
-gem 'jekyll-sitemap', '~> 1.4'     # Sitemap generation
-gem 'jekyll-paginate', '~> 1.1'    # Pagination support
-gem 'jekyll-sass-converter', '~> 2.1' # Sass/SCSS support
+# Add gems that will no longer be default in future Ruby versions
+gem 'logger'
+gem 'csv'
+gem 'ostruct'
+gem 'base64'
+gem 'bigdecimal'
+gem "webrick", "~> 1.8"
