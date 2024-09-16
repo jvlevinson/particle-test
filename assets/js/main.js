@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 value: 160, // Keep the same number of particles
                 density: {
                     enable: true,
-                    value_area: 5000 // Adjusted for a small area
+                    value_area: 250 // Adjusted for a small area
                 }
             },
             color: {
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
             opacity: {
-                value: 0.5,
+                value: 0.8,
                 random: true,
                 anim: {
                     enable: false,
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 enable: false,
                 distance: 150,
                 color: "#ffffff",
-                opacity: 0.4,
+                opacity: 0.1,
                 width: 1
             },
             move: {
@@ -311,5 +311,5 @@ document.addEventListener("DOMContentLoaded", function () {
     particlesJS("particles-js", headerParticleConfig);
     particlesJS("particles-js-circle", imageParticleConfig);
     particlesJS("footer-particles-js", footerParticleConfig);
-    
+
 }, false);
