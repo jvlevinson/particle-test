@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <!-- Add or remove sections as needed for the alternative layout -->
+      <section id="custom-section">
+        <h2>Custom Section for Alternative Layout</h2>
+        <p>This is a custom section only available in the alternative layout.</p>
+      </section>
+      <!-- Include content area where page-specific content will be injected -->
+      {{ content }}
+      {% include footer.html %}
+  </body>
+</html>

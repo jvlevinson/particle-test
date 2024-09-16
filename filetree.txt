@@ -1,0 +1,61 @@
+/mnt/c/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test
+├── LICENSE.txt
+├── README.md
+├── _config.yml
+├── _includes
+│   ├── about.html
+│   ├── footer.html
+│   ├── google-analytics.html
+│   ├── head.html
+│   ├── header.html
+│   └── projects.html
+├── _layouts
+│   └── default.html
+├── assets
+│   ├── css
+│   │   └── main.css
+│   ├── fonts
+│   │   ├── devicon.ttf
+│   │   ├── devicon.woff
+│   │   ├── fontawesome-webfont.ttf
+│   │   ├── fontawesome-webfont.woff
+│   │   └── fontawesome-webfont.woff2
+│   ├── img
+│   │   ├── mountains.jpg
+│   │   └── skate.jpg
+│   └── js
+│       ├── main.js
+│       └── sweet-scroll.min.js
+├── filetree.txt
+├── gulpfile.js
+├── index.html
+├── package.json
+├── particle.jpg
+├── src
+│   ├── fonts
+│   │   ├── devicon.ttf
+│   │   ├── devicon.woff
+│   │   ├── fontawesome-webfont.ttf
+│   │   ├── fontawesome-webfont.woff
+│   │   └── fontawesome-webfont.woff2
+│   ├── img
+│   │   ├── mountains.jpg
+│   │   └── skate.jpg
+│   ├── js
+│   │   └── app.js
+│   └── styles
+│       ├── _about.scss
+│       ├── _animation.scss
+│       ├── _base.scss
+│       ├── _footer.scss
+│       ├── _header.scss
+│       ├── _projects.scss
+│       ├── _vars.scss
+│       ├── lib
+│       │   ├── _devicon.scss
+│       │   ├── _fontawesome.scss
+│       │   └── _normalize.scss
+│       └── main.scss
+└── yarn.lock
+
+13 directories, 45 files
