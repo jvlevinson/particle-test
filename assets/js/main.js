@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 value: 160, // Keep the same number of particles
                 density: {
                     enable: true,
-                    value_area: 90000 // 300px x 300px area (300 * 300)
+                    value_area: 1000 // 300px x 300px area (300 * 300)
                 }
             },
             color: {

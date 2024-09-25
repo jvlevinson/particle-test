@@ -787,8 +787,8 @@ template {
 .image-cropper img {
     position: relative;
     z-index: 2;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 250px;
     vertical-align: middle;
 }
 
