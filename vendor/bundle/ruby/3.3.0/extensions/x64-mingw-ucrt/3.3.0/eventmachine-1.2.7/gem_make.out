@@ -1,0 +1,20 @@
+current directory: C:/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240925-37228-4oa71r sitelibdir\=./.gem.20240925-37228-4oa71r clean
+
+current directory: C:/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240925-37228-4oa71r sitelibdir\=./.gem.20240925-37228-4oa71r
+generating fastfilereaderext-x64-mingw-ucrt.def
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: C:/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240925-37228-4oa71r sitelibdir\=./.gem.20240925-37228-4oa71r install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20240925-37228-4oa71r
+
+current directory: C:/Users/JordanLevinson/OneDrive - Javosec Corp/Documents/Github/particle-test/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240925-37228-4oa71r sitelibdir\=./.gem.20240925-37228-4oa71r clean
