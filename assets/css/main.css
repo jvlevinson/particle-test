@@ -2,279 +2,124 @@
  * normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css
  */
 
+/* ========================================
+   Import External Resources
+   ======================================== */
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab|Antic+Slab');
+
+/* Import Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-/* Set maximum width for images and legends */
-img,
-legend {
+/* ========================================
+   Base Styles
+   ======================================== */
+
+/* Box-sizing and Margin Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff; /* Adjust as needed */
+}
+
+/* Typography */
+h1, h2, h3, h4, strong {
+    margin-top: 1em;
+    padding-top: 1em;
+    line-height: 1.25;
+    color: #1a222c;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #4b5664;
+}
+
+/* Images and Media */
+img, legend {
     max-width: 100%;
+    height: auto;
+    border-style: none;
 }
 
-/* Position adjustments for Font Awesome list items, subscript, and superscript */
-.fa-ul > li,
-sub,
-sup {
-    position: relative;
+img {
+    object-fit: contain;
 }
 
-/* Hide elements visually */
-.sr-only,
 svg:not(:root) {
     overflow: hidden;
 }
 
-/* Center-align text for specific elements */
-.down,
-.fa-fw,
-.fa-li,
-.footer,
-.header,
-.header-icons,
-.header-icons .icon,
-.user,
-.user-details {
-    text-align: center;
-}
-
-/* Set text color for blockquotes and body */
-blockquote p,
-body {
-    color: #555;
-}
-
-/* Ensure overflow is visible for buttons, horizontal rules, and inputs */
-button,
-hr,
-input {
-    overflow: visible;
-}
-
-/* Display settings for media elements */
-audio,
-canvas,
-progress,
+audio:not([controls]),
 video {
     display: inline-block;
 }
 
-/* Vertical alignment for progress bars, subscript, and superscript */
-progress,
-sub,
-sup {
-    vertical-align: baseline;
-}
-
-/* Box-sizing and padding for checkboxes, radio buttons, and legends */
-[type=checkbox],
-[type=radio],
-legend {
-    box-sizing: border-box;
+/* Utility Classes */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-/* Basic settings for HTML */
-html {
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* Display block elements */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section {
-    display: block;
-}
-
-/* Margin settings for headings */
-h1 {
-    margin: 0.67em 0;
-}
-
-/* Box-sizing for horizontal rules */
-hr {
-    box-sizing: content-box;
-    height: 0;
-}
-
-/* Monospace font settings */
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
-
-/* Anchor tag settings */
-a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-/* Styling for abbreviations with titles */
-abbr[title] {
-    border-bottom: none;
-    text-decoration: underline dotted;
-}
-
-/* Bold text styling */
-b,
-strong {
-    font-weight: bolder;
-}
-
-/* Italic text styling */
-dfn {
-    font-style: italic;
-}
-
-/* Highlighted text styling */
-mark {
-    background-color: #ff0;
-    color: #000;
-}
-
-/* Small text size */
-small {
-    font-size: 80%;
-}
-
-/* Subscript and superscript sizing */
-sub,
-sup {
-    font-size: 75%;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-sup {
-    top: -0.5em;
-}
-
-/* Hide audio elements without controls */
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-/* Image settings */
-img {
-    border-style: none;
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
     height: auto;
-}
-
-/* Form element settings */
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: sans-serif;
-    font-size: 100%;
-    line-height: 1.15;
     margin: 0;
+    overflow: visible;
+    clip: auto;
 }
 
-button,
-select {
-    text-transform: none;
-}
-
-/* Remove default button styles */
-[type=reset],
-[type=submit],
-button,
-html [type=button] {
-    -webkit-appearance: button;
-}
-
-/* Remove inner border and padding for Firefox */
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-
-/* Focus ring for Firefox */
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring,
-button:-moz-focusring {
-    outline: ButtonText dotted 1px;
-}
-
-/* Fieldset and legend styling */
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-    color: inherit;
-    display: table;
-    white-space: normal;
-}
-
-/* Textarea overflow */
-textarea {
-    overflow: auto;
-}
-
-/* Remove spinner buttons from number inputs */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-/* Search input styling */
-[type=search] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-}
-
-/* Remove search cancel button and decoration */
-[type=search]::-webkit-search-cancel-button,
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-/* File upload button styling */
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-}
-
-/* Display settings for summary elements */
-summary {
-    display: list-item;
-}
-
-/* Hide elements with 'hidden' attribute and templates */
-[hidden],
-template {
-    display: none;
-}
-
-/* Font Awesome base styles */
-.fa,
-.fa-stack {
-    display: inline-block;
-}
+/* ========================================
+   Font Awesome Styles
+   ======================================== */
 
 /*!
  * Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -306,32 +151,24 @@ template {
 
 /* Keyframes for pulse animation */
 @-webkit-keyframes pulse {
-    0%,
-    to {
+    0%, to {
         opacity: 0.4;
-        top: 0;
+        transform: translateY(0);
     }
     50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
         opacity: 1;
-        top: -10px;
+        transform: translateY(-10px);
     }
 }
 
 @keyframes pulse {
-    0%,
-    to {
+    0%, to {
         opacity: 0.4;
-        top: 0;
+        transform: translateY(0);
     }
     50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
         opacity: 1;
-        top: -10px;
+        transform: translateY(-10px);
     }
 }
 
@@ -348,7 +185,12 @@ template {
     font-style: normal;
 }
 
-/* Font Awesome base icon styles */
+/* Font Awesome Base Styles */
+.fa,
+.fa-stack {
+    display: inline-block;
+}
+
 .fa {
     font: normal normal normal 14px/1 'FontAwesome';
     font-size: inherit;
@@ -357,7 +199,7 @@ template {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Font Awesome icon sizes */
+/* Font Awesome Icon Sizes */
 .fa-lg {
     font-size: 1.33333333em;
     line-height: 0.75em;
@@ -381,12 +223,12 @@ template {
     font-size: 5em;
 }
 
-/* Fixed-width icons */
+/* Fixed-width Icons */
 .fa-fw {
     width: 1.28571429em;
 }
 
-/* Icon list styles */
+/* Icon List Styles */
 .fa-ul {
     padding-left: 0;
     margin-left: 2.14285714em;
@@ -404,20 +246,14 @@ template {
     left: -1.85714286em;
 }
 
-/* Border around icons */
+/* Border Around Icons */
 .fa-border {
     padding: 0.2em 0.25em 0.15em;
     border: 0.08em solid #eee;
     border-radius: 0.1em;
 }
 
-/* Screen reader only */
-.sr-only,
-a img {
-    border: 0;
-}
-
-/* Pull icons to the left or right */
+/* Pull Icons to the Left or Right */
 .fa-pull-left,
 .pull-left {
     float: left;
@@ -438,7 +274,7 @@ a img {
     margin-left: 0.3em;
 }
 
-/* Spinning and pulse animations */
+/* Spinning and Pulse Animations */
 .fa-spin {
     -webkit-animation: 2s linear infinite fa-spin;
     animation: 2s linear infinite fa-spin;
@@ -449,7 +285,7 @@ a img {
     animation: 1s steps(8) infinite fa-spin;
 }
 
-/* Rotated and flipped icons */
+/* Rotated and Flipped Icons */
 .fa-rotate-90 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -488,7 +324,7 @@ a img {
     filter: none;
 }
 
-/* Stacked icons */
+/* Stacked Icons */
 .fa-stack {
     position: relative;
     width: 2em;
@@ -508,12 +344,12 @@ a img {
     line-height: inherit;
 }
 
-/* Inverse icon color */
+/* Inverse Icon Color */
 .fa-inverse {
     color: #fff;
 }
 
-/* Font Awesome icon content codes */
+/* Font Awesome Icon Content Codes */
 .fa-glass:before {
     content: "\f000";
 }
@@ -522,118 +358,211 @@ a img {
     content: "\f001";
 }
 
-/* ... (continue with other Font Awesome icons as needed) */
+/* ... (Continue with other Font Awesome icons as needed) ... */
 
-/* Screen reader only utility class */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    clip: rect(0, 0, 0, 0);
+/* ========================================
+   Additional Utility Classes
+   ======================================== */
+
+/* Hide Elements Visually */
+.sr-only,
+a img {
+    border: 0;
 }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-}
-
-/* Positioning for elements */
 .down,
-.down .icon,
-.header {
-    position: absolute;
+.fa-fw,
+.fa-li,
+.footer,
+.header,
+.header-icons,
+.header-icons .icon,
+.user,
+.user-details {
+    text-align: center;
 }
 
-
-
-/* Body styling */
+blockquote p,
 body {
-    padding: 0;
-    font-size: 100%;
-    line-height: 1.5;
     color: #555;
-    font-family: 'Montserrat', sans-serif;
 }
 
-/* Headings styling */
-h1,
-h2,
-h3,
-h4,
-strong {
-    margin-top: 1em;
-    padding-top: 1em;
-    line-height: 1.25;
-    color: #1a222c;
+button,
+hr,
+input {
+    overflow: visible;
+}
+
+progress,
+sub,
+sup {
+    vertical-align: baseline;
+}
+
+[type=checkbox],
+[type=radio],
+legend {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block;
 }
 
 h1 {
-    font-size: 2.5rem;
+    margin: 0.67em 0;
 }
 
-h2 {
-    font-size: 2rem;
+hr {
+    box-sizing: content-box;
+    height: 0;
 }
 
-h3 {
-    font-size: 1.5rem;
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
-h4 {
-    font-size: 1rem;
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline dotted;
 }
 
-/* List styling */
-ol,
-ul {
-    padding-left: 40px;
+b,
+strong {
+    font-weight: bolder;
 }
 
-figure,
-ol,
-p,
-ul {
-    margin: .5em 0;
+dfn {
+    font-style: italic;
 }
 
-/* Subscript and superscript line height */
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
 sub,
 sup {
-    line-height: 0;
+    font-size: 75%;
 }
 
-/* Particle background */
-#particles-js {
-    background: #1a222c;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    vertical-align: bottom;
-    min-height: 100vh;
-  }
-
-#particles-js .particles-js-canvas-el {
-    width: 100% !important;
-    height: 100vh !important;
+sub {
+    bottom: -0.25em;
 }
 
-/* Link styling */
-.down,
-.header-links .link {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+sup {
+    top: -0.5em;
 }
 
-/* Header styling */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: ButtonText dotted 1px;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    color: inherit;
+    display: table;
+    white-space: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+summary {
+    display: list-item;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+/* ========================================
+   Header Styling
+   ======================================== */
+
 .header {
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
@@ -641,9 +570,9 @@ sup {
     top: 50%;
     left: 50%;
     margin: 0 auto;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 75%;
+    position: absolute;
 }
 
 .header .site-title {
@@ -661,37 +590,22 @@ sup {
     margin-top: 10px;
 }
 
-/* Icon link styling */
-.down,
-.header-icons .icon,
-.header-links .link:visited {
-    color: #fff;
+.header-links {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.header-links,
-.tech {
-    margin: 10px;
-}
-
-/* Main content sections */
-#about,
-#projects,
-.down {
-    margin: 0 auto;
-}
-
-/* Subheader links */
-.subheader-links .link {
+.header-links .link {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
     margin: 10px;
 }
 
-/* Header icons */
 .header-icons {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 .header-icons .icon {
@@ -711,27 +625,26 @@ sup {
     background: #fff;
 }
 
-/* Down arrow styling */
+/* ========================================
+   Down Arrow Styling
+   ======================================== */
+
 .down {
+    position: absolute;
     bottom: 25px;
     width: 100%;
     display: block;
     font-size: 30px;
     cursor: pointer;
+    color: #fff;
 }
 
 .down .icon {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
     fill: #fff;
-    -webkit-animation: 1.3s infinite pulse;
-    animation: 1.3s infinite pulse;
+    animation: pulse 1.3s infinite;
 }
 
 .down .icon:hover,
@@ -741,137 +654,48 @@ sup {
     color: #4b5664;
 }
 
-/* User section styling */
+/* ========================================
+   User Section Styling
+   ======================================== */
+
 .user {
-    font-size: 60px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: all 0.3s ease;
 }
 
-.user p {
+.tech {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 30%;
+    min-width: 280px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.tech img {
+    object-fit: contain;
+    height: 60px;
+    width: auto;
+}
+
+.tech p {
     font-size: 16px;
 }
 
-.user-details {
-    margin: 5px auto;
+/* AI Section Specific Styling */
+.ai-section {
+    /* Additional styles if needed */
 }
 
-/* Projects section */
-#projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/* ========================================
+   Footer Styling
+   ======================================== */
 
-.user-projects {
-    margin: 20px auto;
-}
-
-.user-projects img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.user-projects h5,
-body {
-    margin: 0;
-}
-
-.user-projects li {
-    color: #1a222c;
-    font-size: 1.1rem;
-}
-
-.user-projects p {
-    margin-right: 5px;
-}
-
-/* Media queries for responsiveness */
-@media only screen and (min-width: 550px) {
-    .header .site-title {
-        margin: 0;
-        font-size: 76px;
-    }
-
-    .header .site-description {
-        font-size: 34px;
-    }
-
-    .subheader-links .link {
-        font-size: 20px;
-    }
-
-    .header-icons .icon {
-        width: 30px;
-        height: 30px;
-        font-size: 30px;
-    }
-
-    #about,
-    #projects {
-        width: 80%;
-    }
-
-    .user {
-        flex-wrap: nowrap;
-        font-size: 75px;
-    }
-
-    .contents {
-        margin-left: 0;
-        width: 48%;
-    }
-
-    .contents-right {
-        margin-top: -5%;
-    }
-
-    .contents-right,
-    .images-right {
-        float: right;
-        width: 48%;
-    }
-
-    .images-right img {
-        float: right;
-    }
-
-    .images-left {
-        float: left;
-        width: 48%;
-    }
-
-    .images-left img {
-        float: left;
-    }
-}
-
-/* Project link styling */
-.project-link {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 5px;
-    color: #1a222c;
-    border: 1px solid #1a222c;
-    border-radius: 10px;
-    outline: 0;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
-}
-
-.project-link:hover,
-.project-link:active {
-    background-color: #54516a;
-    border-color: #54516a;
-    color: #fff;
-    transition: color 0.3s ease-in, background-color 0.3s ease-in, border-color 0.3s ease-in;
-}
-
-/* Footer styling */
 .footer {
     background: #1a222c;
     padding: 10px 0;
@@ -882,7 +706,6 @@ body {
     overflow: hidden; /* Ensure particles don't overflow */
 }
 
-/* Adjust the particles container to fit within the footer */
 #footer-particles-js {
     position: absolute;
     top: 0;
@@ -902,71 +725,14 @@ body {
     color: #fff;
 }
 
-.header-links:first-of-type {
-    margin-bottom: 10px;
-    text-align: center;
+.footer a:hover,
+.footer a:active {
+    color: #4b5664;
 }
 
-.nav-links a {
-    font-size: 30px;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-@media only screen and (min-width: 550px) {
-    .user {
-        flex-wrap: nowrap;
-        font-size: 75px;
-    }
-}
-
-@media (max-width: 768px) {
-    .user {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .tech {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-.user {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.tech {
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: 30%;
-    min-width: 280px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
-.tech img {
-    object-fit: contain;
-    height: 60px;
-    width: auto;
-}
-
-.user-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    flex-wrap: wrap;
-}
+/* ========================================
+   Testimonial Section
+   ======================================== */
 
 .testimonial-quote {
     text-align: center;
@@ -1004,7 +770,10 @@ body {
     text-shadow: 0 1px #fff;
 }
 
-/* Circular image cropping */
+/* ========================================
+   Image Cropper
+   ======================================== */
+
 .image-cropper {
     position: relative;
     z-index: 1;
@@ -1015,12 +784,251 @@ body {
     margin: 0 20px;
 }
 
-@media (max-width: 768px) {
-    .user-details {
+.image-cropper img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* ========================================
+   Project Link Styling
+   ======================================== */
+
+.project-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px;
+    color: #1a222c;
+    border: 1px solid #1a222c;
+    border-radius: 10px;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.project-link:hover,
+.project-link:active {
+    background-color: #54516a;
+    border-color: #54516a;
+    color: #fff;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, border-color 0.3s ease-in;
+}
+
+/* ========================================
+   Main Content Sections
+   ======================================== */
+
+#about,
+#projects,
+.down {
+    margin: 0 auto;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-projects {
+    margin: 20px auto;
+}
+
+.user-projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.user-projects h5,
+body {
+    margin: 0;
+}
+
+.user-projects li {
+    color: #1a222c;
+    font-size: 1.1rem;
+}
+
+.user-projects p {
+    margin-right: 5px;
+}
+
+/* ========================================
+   Responsive Media Queries
+   ======================================== */
+
+/* ========================================
+   Desktop Styles
+   ======================================== */
+
+/* Desktop: 1920×1080, 1366×768, 1280×1024, 1024×768 */
+@media only screen and (min-width: 1201px) {
+    /* Ensure 3-column layout */
+    .tech {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: 30%;
+    }
+
+    /* Center the AI section */
+    .ai-section {
+        margin: 0 auto;
+    }
+
+    /* Header Adjustments */
+    .header .site-title {
+        font-size: 50px;
+    }
+
+    .header .site-description {
+        font-size: 20px;
+    }
+
+    .subheader-links .link {
+        font-size: 15px;
+    }
+
+    .header-icons .icon {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+    }
+}
+
+/* ========================================
+   Large Tablets and Small Desktops
+   ======================================== */
+
+/* Tablet: 768×1024, 1024×768, 601×962 */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    .user {
+        max-width: 1000px;
+    }
+
+    .tech {
+        flex: 1 1 calc(50% - 20px); /* 2 columns */
+        max-width: 45%;
+    }
+
+    /* Position the AI section first in 2-column layout */
+    .ai-section {
+        order: -1; /* Moves AI section to the beginning */
+        flex: 1 1 100%; /* Makes AI section span full width */
+        max-width: 100%;
+        text-align: center; /* Center content */
+    }
+
+    /* Header Adjustments for Tablet */
+    .header .site-title {
+        font-size: 50px;
+    }
+
+    .header .site-description {
+        font-size: 20px;
+    }
+
+    .subheader-links .link {
+        font-size: 15px;
+    }
+
+    .header-icons .icon {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    /* Adjust User Flex Direction if Needed */
+    .user {
+        flex-wrap: nowrap;
+        font-size: 75px;
+    }
+
+    .contents {
+        margin-left: 0;
+        width: 48%;
+    }
+
+    .contents-right {
+        margin-top: -5%;
+        float: right;
+        width: 48%;
+    }
+
+    .contents-right,
+    .images-right {
+        float: right;
+        width: 48%;
+    }
+
+    .images-right img {
+        float: right;
+    }
+
+    .images-left {
+        float: left;
+        width: 48%;
+    }
+
+    .images-left img {
+        float: left;
+    }
+}
+
+/* ========================================
+   Mobile Styles
+   ======================================== */
+
+/* Mobile: 375×667, 414×736, 360×800, 390×844 */
+@media only screen and (max-width: 600px) {
+    .user {
         flex-direction: column;
         padding: 10px;
     }
 
+    .tech {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Ensure AI section is first and spans full width */
+    .ai-section {
+        order: -1;
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust Header for Smaller Screens */
+    .header .site-title {
+        font-size: 36px;
+    }
+
+    .header .site-description {
+        font-size: 18px;
+    }
+
+    .header-icons .icon {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    /* Adjust Testimonial Section */
     .testimonial-quote {
         width: 90%;
         padding: 5px;
@@ -1033,27 +1041,152 @@ body {
     }
 }
 
+/* ========================================
+   Medium Screens (550px to 768px)
+   ======================================== */
+
 @media only screen and (min-width: 550px) and (max-width: 768px) {
-    .user-details {
-        flex-direction: row;
-        padding: 15px;
+    .header .site-title {
+        margin: 0;
+        font-size: 76px;
     }
 
-    .testimonial-quote {
-        width: 80%;
-        padding: 8px;
-        font-size: 1.1em;
+    .header .site-description {
+        font-size: 34px;
     }
 
-    @media only screen and (min-width: 550px) {
-        .testimonial-quote {
-            width: 75%;
-            font-size: 16px;
-        }
+    .subheader-links .link {
+        font-size: 20px;
+    }
+
+    .header-icons .icon {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    .user {
+        flex-wrap: nowrap;
+        font-size: 75px;
+    }
+
+    .contents {
+        margin-left: 0;
+        width: 48%;
+    }
+
+    .contents-right {
+        margin-top: -5%;
+        float: right;
+        width: 48%;
+    }
+
+    .contents-right,
+    .images-right {
+        float: right;
+        width: 48%;
+    }
+
+    .images-right img {
+        float: right;
+    }
+
+    .images-left {
+        float: left;
+        width: 48%;
+    }
+
+    .images-left img {
+        float: left;
     }
 }
 
-/* Particle effect styling */
+/* ========================================
+   Larger Tablets and Small Desktops
+   ======================================== */
+
+/* Ensuring Testimonial Quote Adjustments */
+@media only screen and (min-width: 550px) {
+    .testimonial-quote {
+        width: 75%;
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   Additional Responsive Adjustments
+   ======================================== */
+
+/* Smooth Transitions for Layout Changes */
+.user, .tech {
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   Keyframes and Animations
+   ======================================== */
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0%, 100% {
+        opacity: 0.4;
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+/* Spinning Icon Animation */
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+/* ========================================
+   Particle Effect Styling
+   ======================================== */
+
+#particles-js {
+    background: #1a222c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    vertical-align: bottom;
+    min-height: 100vh;
+}
+
+#particles-js .particles-js-canvas-el {
+    width: 100% !important;
+    height: 100vh !important;
+}
+
 #particles-js-circle {
     position: absolute;
     top: 0;
@@ -1066,10 +1199,65 @@ body {
     background-color: #1a222c;
 }
 
-.image-cropper img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
+/* ========================================
+   Other Page Elements
+   ======================================== */
+
+/* Ensure other elements remain unaffected */
+.down,
+.fa-fw,
+.fa-li,
+.footer,
+.header,
+.header-icons,
+.header-icons .icon,
+.user,
+.user-details {
+    text-align: center;
 }
+
+.down,
+.header-links .link {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-links:first-of-type {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.nav-links a {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* ========================================
+   Final Notes
+   ======================================== */
+
+/*
+ * This CSS is structured to maintain existing styles across all pages.
+ * The media queries are organized to handle Desktop, Tablet, and Mobile
+ * screen sizes based on the resolutions provided.
+ *
+ * Key Features:
+ * - 3-column layout for Desktop screens with AI section centered.
+ * - 2-column layout for Tablet screens with AI section positioned first.
+ * - 1-column layout for Mobile screens with AI section first and spanning full width.
+ *
+ * Ensure that your HTML structure includes the 'ai-section' class for the AI .tech div:
+ *
+ * <div class="tech ai-section">
+ *     <!-- AI content -->
+ * </div>
+ *
+ * This will allow the CSS to target and position the AI section appropriately.
+ *
+ * Test the responsiveness using browser developer tools to emulate the specified screen sizes.
+ */
+
