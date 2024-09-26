@@ -781,7 +781,7 @@ template {
     height: 300px;
     overflow: hidden;
     border-radius: 50%;
-    margin: 0 20px;
+    margin: 0 auto; /* Adjusted to center the circle */
 }
 
 .image-cropper img {
@@ -830,11 +830,12 @@ template {
 .user-details {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center; /* Center content horizontally */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     flex-wrap: wrap;
+    text-align: center; /* Ensures text below is centered */
 }
 
 /* Projects Section */
@@ -1204,17 +1205,6 @@ body {
    ======================================== */
 
 /* Ensure other elements remain unaffected */
-.down,
-.fa-fw,
-.fa-li,
-.footer,
-.header,
-.header-icons,
-.header-icons .icon,
-.user,
-.user-details {
-    text-align: center;
-}
 
 .down,
 .header-links .link {
