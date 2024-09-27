@@ -829,13 +829,13 @@ template {
 
 .user-details {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    flex-wrap: wrap;
-    text-align: center; /* Ensures text below is centered */
+    text-align: center;
 }
 
 /* Projects Section */
