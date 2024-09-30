@@ -781,12 +781,14 @@ template {
     height: 300px;
     overflow: hidden;
     border-radius: 50%;
-    margin: 0 auto; /* Adjusted to center the circle */
+    margin: 0 auto;
 }
 
 .image-cropper img {
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     width: auto;
     height: 250px;
@@ -988,6 +990,24 @@ body {
         float: left;
     }
 }
+
+
+/* Mobile (width below 768px) */
+@media (max-width: 768px) {
+    .image-cropper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .image-cropper img {
+        height: 180px;
+    }
+
+    .user-details {
+        padding: 10px;
+    }
+}
+
 
 /* ========================================
    Mobile Styles
