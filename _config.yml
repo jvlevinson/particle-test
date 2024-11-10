@@ -44,6 +44,6 @@ nav_links:
 
 # Google-analytics
 google-analytics:
-  id: "GTM-PNNBPG24"
+  id: "GTM-XXXXXXX"
 
 exclude: ['package.json', 'src' , 'node_modules']
